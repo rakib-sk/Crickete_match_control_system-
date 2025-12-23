@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Match System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h2> Match Control</h2>
+
+<input id="teamA" placeholder="Team A Name">
+<input id="teamB" placeholder="Team B Name">
+<select id="battingSelect">
+    <option value="">Select Batting Team</option>
+</select>
+<button onclick="startMatch()">Start Match</button>
+
+<hr>
+
+<div class="score" id="score">0/0</div>
+<div class="small" id="over">Overs: 0.0</div>
+<div class="small" id="batting"></div>
+
+<div class="grid">
+    <button onclick="run(0)">Dot</button>
+    <button onclick="run(1)">+1</button>
+    <button onclick="run(2)">+2</button>
+    <button onclick="run(4)">+4</button>
+    <button onclick="run(6)">+6</button>
+
+    <button class="blue" onclick="extra()">Wide</button>
+    <button class="red" onclick="wicket()">Wicket</button>
+
+    <button class="gray" onclick="endMatch()">End</button>
+    <button class="red" onclick="resetCurrent()">Reset</button>
+</div>
+
+<hr>
+<h3>Match History</h3>
+<div id="history"></div>
+</div>
+
+    <footer class="site-footer">
+        &copy; Made by RooTcore6, Company CEO Rakib
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
