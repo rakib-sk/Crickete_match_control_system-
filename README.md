@@ -1,97 +1,61 @@
-# Crickete_match_control_system-
-Cricket Match System is a browser-based tool to manage live cricket scores. It tracks runs, wickets, balls, overs, dot balls, and extras like wides. Users can select the batting team, start/end matches, and view a history table of completed matches. Data is saved locally with a modern, responsive UI.
+# Smart Cricket System
 
-# Cricket Match System 🏏
-
-A **simple, browser-based cricket match management system** built with **HTML, CSS, and JavaScript**.  
-This system is designed for **live scoring in cricket matches**, tracking runs, wickets, overs, and maintaining match history.
+**Description:**  
+Smart Cricket System is a web-based cricket scoring application that allows users to track real-time runs, wickets, bowlers, and batsmen. Users can manage innings, ball-by-ball commentary, and view match history with ease.  
 
 ---
 
 ## Features
 
-### 1. Team Setup
-- Input fields to add **Team A** and **Team B** names.
-- Dropdown to select **batting team** before starting the match.
-
-### 2. Score Management
-- Buttons for adding runs:
-  - `Dot` → 0 runs, counts as a legal ball.
-  - `+1, +2, +4, +6` → normal runs, ball counts.
-- **Extra runs**:
-  - `Wide` → +1 run, ball **does not count**.
-- **Wicket** button → adds wicket, ball counts.
-- Automatic **ball & over calculation**:
-  - Overs shown in `X.Y` format (X = completed overs, Y = balls in current over).
-
-### 3. Match Control
-- **Start Match** → initializes the match with selected batting team.
-- **End Match** → completes the match and saves data to history:
-  - Calculates **target** for opponent team.
-- **Reset** → resets the current match without affecting history.
-
-### 4. Match History
-- All completed matches are saved in **localStorage**.
-- Displayed in a **table** format:
-  - Columns: Batting Team, Runs/Wickets, Overs, Opponent, Target, Action.
-- Option to **delete any match** from history.
-- Persists across browser sessions.
-
-### 5. User Interface (UI)
-- **Light Mode** design with modern styling:
-  - White container background, subtle shadows, soft text colors.
-  - Buttons color-coded:
-    - Blue → Extra runs
-    - Green → Normal actions
-    - Red → Wicket/Delete
-- Responsive layout for **mobile and desktop**.
+| Feature | Description |
+|---------|-------------|
+| Team Selection | Select two teams and choose the batting team. |
+| Score Management | Add runs (0,1,2,3,4,6) and Wide/Extra Ball. |
+| Wickets & Batsmen | Track wickets and add new batsmen. |
+| Bowler Management | Add or select bowlers. |
+| Undo / Redo | Undo/Redo up to 12 steps. |
+| Innings Control | End innings and start the 2nd innings. |
+| Commentary | View ball-by-ball commentary. |
+| Summary | Displays Total Balls and Total Batters. |
+| Match History | View past matches and delete history entries. |
 
 ---
 
-## Usage
-
-1. Open the HTML file in a **modern browser**.
-2. Enter team names in the input fields.
-3. Select batting team from dropdown.
-4. Click **Start Match**.
-5. Use buttons to update runs, extras, wickets, and dot balls.
-6. Check overs and score at the top.
-7. Click **End Match** to finish the match and save it to history.
-8. History table shows all matches with **target for opponent team**.
-9. Delete any match from history with the **Delete** button.
+## Technologies Used
+- HTML  
+- CSS  
+- JavaScript (Vanilla JS)  
+- LocalStorage (Browser-based data persistence)  
 
 ---
 
-## Technical Details
+## How to Use
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Data Storage**: `localStorage` (persists match and history)
-- **Logic**:
-  - Runs, wickets, balls, overs tracked live.
-  - Dot balls, wide balls, and wickets handled correctly.
-  - Target for opponent calculated as `runs + 1`.
+1. Open `index.html` in your browser.  
+2. Enter Team A, Team B, and select the batting team.  
+3. Click `Start Match`.  
+4. Add batsmen and bowler(s).  
+5. Add runs, wickets, or extra balls during the match.  
+6. Click `End Innings` to finish an innings.  
+7. View and manage match history in the History section.  
+
+---
+
+## Live Demo
+You can try the live demo here: https://cricketematchcontrol.netlify.app/
 
 ---
 
 ## Notes
-
-- Dot balls are tracked without increasing runs but increment balls.
-- Wide balls increase runs but do **not** count as a legal ball.
-- All data is **saved locally** in the browser and will remain until cleared.
-- Modern UI ensures **readability and usability** on match day.
-
----
-
-## Future Improvements
-
-- Dark/Light mode toggle.
-- Undo last action button.
-- Export history to CSV for offline record.
-- Timer or match clock integration.
-- Player-level scorecard per match.
+- All data is stored in the browser's LocalStorage.  
+- Undo / Redo works for up to 12 steps.  
 
 ---
 
 ## Author
+**Rakib Hossen**  
 
-Rakib – A web enthusiast building unique tools for cricket match scoring.
+---
+
+**Credits:**  
+Developed using **ChatGPT**.
