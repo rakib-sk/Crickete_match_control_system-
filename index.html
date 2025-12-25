@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cricket Match System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Smart Cricket System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <div class="container">
-<h2> Match Control</h2>
+<h2>Smart Cricket System</h2>
 
+<h3>Teams</h3>
 <input id="teamA" placeholder="Team A Name">
 <input id="teamB" placeholder="Team B Name">
 <select id="battingSelect">
@@ -24,30 +24,73 @@
 <div class="score" id="score">0/0</div>
 <div class="small" id="over">Overs: 0.0</div>
 <div class="small" id="batting"></div>
+<div class="small" id="innings"></div>
 
 <div class="grid">
     <button onclick="run(0)">Dot</button>
     <button onclick="run(1)">+1</button>
     <button onclick="run(2)">+2</button>
+    <button onclick="run(3)">+3</button>
     <button onclick="run(4)">+4</button>
     <button onclick="run(6)">+6</button>
-
     <button class="blue" onclick="extra()">Wide</button>
     <button class="red" onclick="wicket()">Wicket</button>
-
-    <button class="gray" onclick="endMatch()">End</button>
-    <button class="red" onclick="resetCurrent()">Reset</button>
+    <button class="gray" onclick="undo()">Undo</button>
+    <button class="gray" onclick="redo()">Redo</button>
+    <button class="red" onclick="endMatch()">End Innings</button>
 </div>
+
+<hr>
+<h3>Ball Commentary</h3>
+<div id="commentary" class="small">No commentary</div>
+
+<hr>
+<h3>Batting</h3>
+<input id="bat1" placeholder="Batsman 1">
+<input id="bat2" placeholder="Batsman 2">
+<button onclick="addBatsmen()">Add Batsmen</button>
+<select id="strikerSelect"></select>
+
+<table>
+<thead>
+<tr><th>Batsman</th><th>Runs</th><th>Balls</th></tr>
+</thead>
+<tbody id="batTable"></tbody>
+</table>
+
+<h3>Wickets</h3>
+<table>
+<thead>
+<tr><th>Batsman</th><th>Runs</th></tr>
+</thead>
+<tbody id="wicketTable"></tbody>
+</table>
+
+<hr>
+<h3>Bowling</h3>
+<input id="bowlerInput" placeholder="Bowler Name">
+<button onclick="addBowler()">Add / Select Bowler</button>
+<table>
+<thead>
+<tr><th>Bowler</th><th>Balls</th><th>Runs</th></tr>
+</thead>
+<tbody id="bowlTable"></tbody>
+</table>
+
+<p class="small">Total Balls: <span id="totalBalls">0</span></p>
+<p class="small">Total Batters: <span id="totalBatters">0</span></p>
 
 <hr>
 <h3>Match History</h3>
 <div id="history"></div>
+<button class="red" onclick="clearHistory()">Clear History</button>
+
 </div>
 
-    <footer class="site-footer">
-        &copy; Made by RooTcore6, Company CEO Rakib
-    </footer>
-    
-    <script src="js/main.js"></script>
+<footer class="site-footer">
+&copy; Made by RooTcore6 | CEO Rakib
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
