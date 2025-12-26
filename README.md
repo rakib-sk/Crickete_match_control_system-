@@ -13,11 +13,12 @@ Smart Cricket System is a web-based cricket scoring application that allows user
 | Score Management | Add runs (0,1,2,3,4,6) and Wide/Extra Ball. |
 | Wickets & Batsmen | Track wickets and add new batsmen. |
 | Bowler Management | Add or select bowlers. |
-| Undo / Redo | Undo/Redo up to 12 steps. |
+| Undo / Redo | Undo/Redo up to 20 steps. |
 | Innings Control | End innings and start the 2nd innings. |
-| Commentary | View ball-by-ball commentary. |
+| Commentary | View ball-by-ball commentary (Wickets shown in red). |
 | Summary | Displays Total Balls and Total Batters. |
-| Match History | View past matches and delete history entries. |
+| Match History | View past matches and clear history. |
+| Innings Summary | Detailed table of each innings with batsmen & bowlers stats. |
 
 ---
 
@@ -38,7 +39,34 @@ Smart Cricket System is a web-based cricket scoring application that allows user
 5. Add runs, wickets, or extra balls during the match.  
 6. Click `End Innings` to finish an innings.  
 7. View and manage match history in the History section.  
+8. Use Undo/Redo buttons to correct mistakes.  
 
+---
+
+## Live Demo
+You can try the live demo here: https://cricketematchcontrol.netlify.app/
+
+---
+
+## Notes
+- All data is stored in the browser's LocalStorage.  
+- Undo / Redo works for up to 20 steps.  
+- Ball-by-ball commentary saves all events including runs, wickets, wides.  
+
+---
+
+## Author
+**RooTcore6 | CEO Rakib Hossen**  
+
+---
+
+## Credits
+- **MF Fahim**  
+- **Mir Mohamad Zahid**  
+- **Abur Rohoman**  
+- **Sanjidha Aktar**  
+- **Lamiya Nourin**  
+- Developed using **ChatGPT**
 ---
 
 ## Live Demo
